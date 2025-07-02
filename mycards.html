@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0"
+  />
+  <title>My Cards</title>
+  <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mycards.css" />
+
+</head>
+<body>
+  <div class="app">
+
+    <!-- ——— Header ——— -->
+    <header class="cards-header">
+      <button class="back-btn">&larr;</button>
+      <h1>My cards</h1>
+    </header>
+
+    <!-- ——— Segmented Control ——— -->
+    <div class="segmented-control">
+      <button class="tab active" data-tab="virtual">Virtual</button>
+      <button class="tab" data-tab="physical">Physical</button>
+    </div>
+
+    <!-- ——— Content Panes ——— -->
+    <div class="cards-content">
+      <!-- Virtual -->
+      <section id="virtual" class="card-pane">
+        <div class="preview-card virtual">
+          <!-- Logo + masked PAN -->
+        <div class="card-top">
+        <img 
+        src="images/sadapay.png" 
+        data-original-src="images/sadapay.png" 
+        class="card-logo" 
+        alt="Brand Logo" 
+        />
+
+        <div class="card-number">
+
+            <span class="masked">••••</span>
+            <span class="masked">••••</span>
+            <span class="masked">••••</span>
+            <span class="last4">7026</span>
+
+            <!-- unmasked: 3 first rows + last-4 as 4th -->
+            <span class="unmasked">1234</span>
+            <span class="unmasked">5678</span>
+            <span class="unmasked">9012</span>
+            <span class="unmasked">7026</span>
+        </div>
+
+        </div>
+
+
+          <!-- Exp & CVC -->
+          <div class="card-info">
+            <div class="field">
+                <small>Exp date</small>
+                <div class="field-number">
+                <span class="masked">••/••</span>
+                <span class="unmasked">12/24</span>
+                </div>
+            </div>
+            <div class="field">
+                <small>CVC</small>
+                <div class="field-number">
+                <span class="masked">•••</span>
+                <span class="unmasked">123</span>
+                </div>
+            </div>
+            </div>
+
+          <!-- Actions -->
+          <div class="card-actions">
+            <button class="btn view">View</button>
+            <button class="btn copy">Copy</button>
+          </div>
+        </div>
+
+        <!-- Freeze toggle -->
+        <ul class="actions-list">
+          <li class="action-item">
+            <img src="images/freeze.jpg" class="action-icon" alt="" />
+            <div class="action-text">
+              <p>Freeze card</p>
+              <small>Lock this card temporarily</small>
+            </div>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Physical -->
+        <section id="physical" class="card-pane hidden">
+        <div class="preview-card physical">
+          <!-- same markup, different classes/values -->
+        <div class="card-top">
+        <img 
+        src="images/sadapay.png" 
+        data-original-src="images/sadapay.png" 
+        class="card-logo" 
+        alt="Brand Logo" 
+        />
+                    <div class="card-number">
+                <span class="masked">••••</span>
+                <span class="masked">••••</span>
+                <span class="masked">••••</span>
+                <span class="last4">1234</span>
+                    <span class="unmasked">1234</span>
+                    <span class="unmasked">5678</span>
+                    <span class="unmasked">9012</span>
+                    <span class="unmasked">1234</span>
+
+            </div>
+
+        </div>
+
+
+          <div class="card-info">
+            <div class="field">
+                <small>Exp date</small>
+                <div class="field-number">
+                <span class="masked">••/••</span>
+                <span class="unmasked">12/24</span>
+                </div>
+            </div>
+            <div class="field">
+                <small>CVC</small>
+                <div class="field-number">
+                <span class="masked">•••</span>
+                <span class="unmasked">123</span>
+                </div>
+            </div>
+            </div>
+
+          <div class="card-actions">
+            <button class="btn view">View</button>
+            <button class="btn copy">Copy</button>
+          </div>
+        </div>
+
+        <ul class="actions-list">
+          <li class="action-item">
+            <img src="images/freeze.jpg" class="action-icon" alt="" />
+            <div class="action-text">
+              <p>Freeze card</p>
+              <small>Lock this card temporarily</small>
+            </div>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </li>
+          <li class="action-item">
+            <img src="images/reissue.jpg" class="action-icon" alt="" />
+            <div class="action-text">
+              <p>Reissue card</p>
+              <small>Block permanently &amp; issue new card</small>
+            </div>
+          </li>
+          <li class="action-item">
+            <img src="images/pin.jpg" class="action-icon" alt="" />
+            <div class="action-text">
+              <p>Change card PIN</p>
+              <small>Update debit card PIN</small>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+  </div>
+
+  <script src="mycards.js" defer></script>
+</body>
+</html>

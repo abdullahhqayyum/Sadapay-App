@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Load money</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="load.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- back + title -->
+    <header class="status-bar load-header">
+      <button class="back-btn">&larr;</button>
+      <h1 class="page-title">Load money</h1>
+    </header>
+
+    <!-- dynamic limit -->
+    <section class="load-limit">
+      <strong class="limit-amount">Rs. <em id="limit-left">0</em></strong>
+      <span class="limit-text">incoming limit left this month</span>
+    </section>
+
+    <!-- Local -->
+    <section class="receive-section">
+      <h2>Receive local transfers</h2>
+      <div class="receive-card">
+        <small>My SadaPay account number</small>
+        <p class="acct-number" id="acct-number">0307 1234567</p>
+        <button class="btn copy-local">Copy</button>
+      </div>
+    </section>
+
+    <!-- International -->
+    <section class="receive-section">
+      <h2>Receive international transfers</h2>
+      <div class="receive-card">
+        <small>My SadaPay IBAN number</small>
+        <p class="iban-number" id="iban-number">PK40 SADA 0000 00 0307 1234567</p>
+        <button class="btn copy-iban">Copy</button>
+      </div>
+    </section>
+  </div>
+  <script src="index.js" defer></script>
+
+  <script src="load.js" defer></script>
+</body>
+</html>

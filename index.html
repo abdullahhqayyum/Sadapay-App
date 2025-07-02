@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mobile Banking App</title>
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- 1. Status bar (fake) -->
+    <header class="status-bar">
+      <span class="time">11:09</span>
+      <div class="status-icons">
+        <span class="dots">•••</span>
+        <span class="wifi">📶</span>
+        <span class="battery">95%</span>
+      </div>
+    </header>
+
+    <!-- 2. Top cards -->
+    <section class="top-cards">
+      <div class="card balance-card">
+        <small>Current balance</small>
+        <h1 id = "current-balance">Rs. 0</h1>
+        <img src="./images/mastercard.png" alt="Mastercard logo" class="logo">
+        <span class="arrow">→</span>
+      </div>
+      <div class="action-cards">
+        <div class="card load-card">
+          <span class="icon">↓</span>
+          <p>Load money</p>
+        </div>
+        <div class="card send-card">
+          <span class="icon">↗</span>
+          <p>Send &amp; Request</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Transactions list -->
+    <section class="transactions">
+        <ul class="tx-list">
+        <!-- JS will inject date-groups and transaction items here -->
+        </ul>
+    </section>
+    </div>
+    <!-- 4. Bottom nav -->
+    <nav class="bottom-nav">
+    <button class="nav-item home active">
+        <span class="icon"></span>
+        <span class="label">Personal</span>
+    </button>
+    <button class="nav-item payments">
+        <span class="icon"></span>
+        <span class="label">Payments</span>
+    </button>
+    <button class="nav-item scan">
+        <span class="icon"></span>
+        <span class="label">Scan QR</span>
+    </button>
+    <button class="nav-item more">
+        <span class="icon"></span>
+        <span class="label">More</span>
+    </button>
+    </nav>
+
+  <script src="index.js" defer></script>
+ 
+</body>
+</html>
