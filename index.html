@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <!-- 1. Make it responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobile Banking App</title>
-  <!-- Link to your CSS -->
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <div class="app">
-    <!-- 1. Status bar (fake) -->
+    <!-- 1. Status bar -->
     <header class="status-bar">
       <span class="time">11:09</span>
       <div class="status-icons">
@@ -21,8 +23,8 @@
     <section class="top-cards">
       <div class="card balance-card">
         <small>Current balance</small>
-        <h1 id = "current-balance">Rs. 0</h1>
-        <img src="./images/mastercard.png" alt="Mastercard logo" class="logo">
+        <h1 id="current-balance">Rs. 0</h1>
+        <img src="./images/mastercard.png" alt="Mastercard logo" class="logo" />
         <span class="arrow">→</span>
       </div>
       <div class="action-cards">
@@ -39,32 +41,32 @@
 
     <!-- 3. Transactions list -->
     <section class="transactions">
-        <ul class="tx-list">
-        <!-- JS will inject date-groups and transaction items here -->
-        </ul>
+      <ul class="tx-list">
+        <!-- JS will inject items here -->
+      </ul>
     </section>
-    </div>
-    <!-- 4. Bottom nav -->
-    <nav class="bottom-nav">
+  </div>
+
+  <!-- 4. Bottom nav -->
+  <nav class="bottom-nav">
     <button class="nav-item home active">
-        <span class="icon"></span>
-        <span class="label">Personal</span>
+      <span class="icon"></span>
+      <span class="label">Personal</span>
     </button>
     <button class="nav-item payments">
-        <span class="icon"></span>
-        <span class="label">Payments</span>
+      <span class="icon"></span>
+      <span class="label">Payments</span>
     </button>
     <button class="nav-item scan">
-        <span class="icon"></span>
-        <span class="label">Scan QR</span>
+      <span class="icon"></span>
+      <span class="label">Scan QR</span>
     </button>
     <button class="nav-item more">
-        <span class="icon"></span>
-        <span class="label">More</span>
+      <span class="icon"></span>
+      <span class="label">More</span>
     </button>
-    </nav>
+  </nav>
 
   <script src="index.js" defer></script>
- 
 </body>
 </html>
